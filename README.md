@@ -10,6 +10,5 @@ I made this!
 [Balance Wheel](https://editor.p5js.org/parurympic/full/CpK5mYctU)
 
 ## Concrete and Abstract
-[bad way](https://editor.p5js.org/parurympic/full/L26TpTD1k)
-\n
+[bad way](https://editor.p5js.org/parurympic/full/L26TpTD1k)  
 [ideal way](https://editor.p5js.org/parurympic/full/3rDHDZgWF)
