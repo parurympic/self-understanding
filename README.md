@@ -11,4 +11,5 @@ I made this!
 
 ## Concrete and Abstract
 [bad way](https://editor.p5js.org/parurympic/full/L26TpTD1k)
+\n
 [ideal way](https://editor.p5js.org/parurympic/full/3rDHDZgWF)
