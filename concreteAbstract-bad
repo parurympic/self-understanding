@@ -1,0 +1,64 @@
+function setup() {
+  createCanvas(400, 400);
+  background(255);
+
+  // タイトルを描画
+  textAlign(CENTER, CENTER);
+  textSize(24);
+  fill(0,0,255); // テキストの色を青に設定
+  text("bad way", width / 2, 30);
+
+  // 三角形の頂点座標を定義
+  let x1 = 200, y1 = 80; // 抽象（上）を少し上にずらす
+  let x2 = 100, y2 = 300; // 具体（左下）
+  let x3 = 300, y3 = 300; // 具体（右下）
+
+  // 三角形の上辺と右辺だけを描画
+  //noFill(); // 塗りつぶしを無効にする
+  //stroke(0); // 線の色を黒に設定
+  //strokeWeight(2); // 線の太さを設定
+  //line(x1, y1, x2, y2); // 左辺
+  //line(x1, y1, x3, y3); // 右辺
+
+  // 頂点にテキストを描画
+  fill(0); // テキストの色を黒に設定
+  noStroke(); // テキストに輪郭線をつけない
+  textAlign(CENTER, CENTER);
+  textSize(20);
+
+  text("Abstract", x1, y1 - 20); // 抽象の位置を上にずらす
+  text("Concrete", x2, y2 + 20);
+  text("Concrete", x3, y3 + 20);
+
+ 
+
+  // 左下の具体のキャプション
+  text("Studying hard\n for entering exam for Uni \nwas enthusiastic", x2, y2 + 60);
+
+  // 右下の具体のキャプション
+  text("Maybe I need to take\nexamination for \Uni again....? ", x3, y3 + 60);
+
+  // 左下の抽象から右下の具体に向かって矢印を描画
+  stroke(0); // 矢印の色を黒に設定
+  strokeWeight(2); // 矢印の太さを設定
+  line(x2, y2, x3, y3); // 矢印の軸
+  drawArrowhead(x2, y2, x3, y3); // 矢じりを描画
+}
+
+// 矢じりを描画する関数
+function drawArrowhead(x1, y1, x2, y2) {
+  let arrowSize = 10;
+  let angle = atan2(y2 - y1, x2 - x1); // 矢印の角度を計算
+  fill(0); // 矢じりを塗りつぶす
+  noStroke(); // 矢じりに輪郭線をつけない
+
+  push();
+  translate(x2, y2); // 矢じりを描画する位置に移動
+  rotate(angle); // 矢じりの方向に回転
+  triangle(-arrowSize, arrowSize / 2, -arrowSize, -arrowSize / 2, 0, 0);
+  pop();
+}
+
+function draw() {
+  // 描画はsetup()で完了するため、draw()は空でOK
+}
